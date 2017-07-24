@@ -1,0 +1,9 @@
+#!/bin/bash
+
+accessibility(){
+grep '@' /root/.msf4/loot/*ssh.authorized* | awk '{ print $1,$3 }' | awk '{print $2}' | sort -u | grep '@' | awk 'NR==1{x=$0;next}NF{x=x", "$0}END{print x}'
+}
+
+authorized(){
+grep '@' /root/.msf4/loot/*ssh.authorized* | awk '{ print $1,$3 }' | grep -o -P '_default_.{0,100}' | cut -c10-
+}
