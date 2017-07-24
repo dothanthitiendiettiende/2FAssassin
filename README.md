@@ -34,18 +34,6 @@ cd 2fassassin
 root@kali:~/2fassassin# python assassin.py -h
 
 
- ___ ___ _                      _
-|_  ) __/_\   ______ __ _ _____(_)_ _
- / /| _/ _ \ (_-<_-</ _` (_-<_-< | '  \+v2
-/___|_/_/ \_\/__/__/\__,_/__/__/_|_||_|
-
-
-usage: assassin.py [-h] [--target TARGET] [--silent] [--scan SCAN]
-                   [--check CHECK] [--cert CERT] [--filetype FILETYPE]
-                   [--user USER] [--secret SECRET] [--host HOST] [--mode MODE]
-                   [--auto AUTO] [--post POST] [--db DB] [--key KEY]
-                   [--log LOG]
-
 Bypass 2FA - SMS, Voice, SSH
 
 optional arguments:
