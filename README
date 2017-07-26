@@ -67,6 +67,29 @@ optional arguments:
 root@kali:~/2fassassin#
 
 
+## Example Usage ##
+
+- Network enumeration:     
+./assassin.py --scan <basic | advanced> --target <ip_address | range>
+./assassin.py --scan advanced --target 192.168.0.0/24
+./assassin.py --scan basic --target 192.168.2.40
+
+- Check for common vulnerabilities which causing the private keys to leak out.
+./assassin.py --check all --mode quiet  
+
+- Attack SSH to get private keys (currently only support brute force)
+./assassin.py --check ssh --mode attack      
+
+- Attack OpenSSL  for keys:   
+./assasin.py --check heartbleed --mode attack
+
+- View activity output:           
+./assassin.py --log all
+
+- See what (e.g., credentials) you've got:          
+./assassin.py --log loot
+
+
 ## Limitations ##
 
 - Development Status :: 2 - Pre-Alpha
