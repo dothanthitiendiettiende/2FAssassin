@@ -13,18 +13,11 @@
 
 ## Installing ##
 
-- From source:
-Install python on Kali Linux
-
-run "pip install 2fassassin"
-
+- Install python on Kali Linux, then run:
+pip install 2fassassin
 cd /root/2fassassin
-
-- From GitHub
-Clone and install
-
+OR
 git clone https://github.com/maxwellkoh/2FAssassin.git
-
 cd 2fassassin
 
 
@@ -80,7 +73,7 @@ root@kali:~/2fassassin#
 - Attack SSH to get private keys (currently only support brute force)
 ./assassin.py --check ssh --mode attack      
 
-- Attack OpenSSL  for keys:   
+- Attack OpenSSL to get private keys:   
 ./assasin.py --check heartbleed --mode attack
 
 - View activity output:           
@@ -88,6 +81,13 @@ root@kali:~/2fassassin#
 
 - See what (e.g., credentials) you've got:          
 ./assassin.py --log loot
+
+- Find out which machine hosting the user account
+./assassin.py --log whereis --user <username>
+
+- Find out What accounts can potentially be accessed by a specific user
+./assassin.py --log  account --host <ip_address>
+
 
 
 ## Limitations ##
@@ -99,8 +99,7 @@ root@kali:~/2fassassin#
 
 ## Copyright ##
 
-2FAssassin
-Created and maintained by Maxwell Koh
+2FAssassin - Created and maintained by Maxwell Koh
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
