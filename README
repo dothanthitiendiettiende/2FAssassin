@@ -2,13 +2,11 @@
 
 ## Intro ##
 
--  The effectiveness of the Two-Factor-Authentication depends on how well a user protects "something only the user has".
-
-- It is possible to steal the server/client certificates and obtaining the private keys, without performing social engineering.
-
-- Exploiting the vulnerabilities against the affected software which were responsible for causing the private keys extraction.
-
-- Propagating the compromise starts from a single system to the entire network using the stolen the private keys.
+- The effectiveness of the Two-Factor-Authentication depends on how well a user protects "something only the user has".
+- The tool looks out for getting the OTP(s) and private keys using various methods.
+- The private keys can be extracted from client certificates and cracked to be used for authentication.
+- The tool exploits the common vulnerabilities that caused private keys leakage.
+- Propagates the compromise starting from a single machine to the entire networks via looted private keys.
 
 
 ## Installing ##
