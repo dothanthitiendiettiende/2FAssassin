@@ -1,0 +1,5 @@
+msfrpc
+pysmb
+paramiko
+pexpect
+progressbar

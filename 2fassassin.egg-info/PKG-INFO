@@ -1,0 +1,108 @@
+Metadata-Version: 1.1
+Name: 2fassassin
+Version: 2.0
+Summary: Bypass Two-Factor-Authentication
+Home-page: https://github.com/maxwellkoh/2FAssassin
+Author: Maxwell Koh
+Author-email: mkoh2016@gmail.com
+License: MIT
+Description: 
+        
+        ## Intro ##
+        
+        -  The effectiveness of the Two-Factor-Authentication depends on how well a user protects "something only the user has".
+        
+        - It is possible to steal the server/client certificates and obtaining the private keys, without performing social engineering.
+        
+        - Exploiting the vulnerabilities against the affected software which were responsible for causing the private keys extraction.
+        
+        - Propagating the compromise starts from a single system to the entire network using the stolen the private keys.
+        
+        
+        ## Installing ##
+        
+        - From source:
+        Install python on Kali Linux
+        
+        run "pip install 2fassassin"
+        
+        cd /root/2fassassin
+        
+        - From GitHub
+        Clone and install
+        
+        git clone https://github.com/maxwellkoh/2FAssassin.git
+        
+        cd 2fassassin
+        
+        
+        ## Features ##
+        
+        root@kali:~/2fassassin# python assassin.py -h
+        
+        
+         ___ ___ _                      _
+        |_  ) __/_\   ______ __ _ _____(_)_ _
+         / /| _/ _ \ (_-<_-</ _` (_-<_-< | '  \+v2
+        /___|_/_/ \_\/__/__/\__,_/__/__/_|_||_|
+        
+        
+        usage: assassin.py [-h] [--target TARGET] [--silent] [--scan SCAN]
+                           [--check CHECK] [--cert CERT] [--filetype FILETYPE]
+                           [--user USER] [--secret SECRET] [--host HOST] [--mode MODE]
+                           [--auto AUTO] [--post POST] [--db DB] [--key KEY]
+                           [--log LOG]
+        
+        Bypass 2FA - SMS, Voice, SSH
+        
+        optional arguments:
+          -h, --help           show this help message and exit
+          --target TARGET      IP Address
+          --silent             reduce output verbosity
+          --scan SCAN          Network enumeration { basic | advanced }
+          --check CHECK        Check for vulnerabilities, modules
+          --cert CERT          Certificate management
+          --filetype FILETYPE  Specify file *.extension
+          --user USER          username
+          --secret SECRET      password
+          --host HOST          server ip
+          --mode MODE          mode
+          --auto AUTO          auto mode for automation
+          --post POST          post modules
+          --db DB              Manage your trophies.
+          --key KEY            keys management
+          --log LOG            View logs
+        root@kali:~/2fassassin#
+        
+        
+        ## Limitations ##
+        
+        - Development Status :: 2 - Pre-Alpha
+        
+        - Currently still under active development.
+        
+        
+        ## Copyright ##
+        
+        2FAssassin
+        Created and maintained by Maxwell Koh
+        
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+        
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+        
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <http://www.gnu.org/licenses/>
+        
+Keywords: 2FA security bypass hacking exploit backdoor
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Text Processing :: Linguistic

