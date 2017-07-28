@@ -1,5 +1,9 @@
 
 
+## Preamble ##
+
+- Code changes from time to time, please do a 'git pull' before running the tool.
+
 ## Intro ##
 
 - The effectiveness of the Two-Factor-Authentication depends on how well a user protects "something only the user has".
