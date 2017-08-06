@@ -97,6 +97,10 @@ root@kali:~/2fassassin#
 ./assassin.py --tunnel ssh --chain 3 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> --user4 <username4> --host3 <server_ip3>
 
 
+## Update ##
+5 August 2017 - Added heartbleed enumeration modules
+7 August 2017 - Added memory dump & key extraction modules
+
 
 
 ## Limitations ##
