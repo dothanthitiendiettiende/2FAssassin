@@ -101,11 +101,12 @@ root@kali:~/2fassassin#
 
 
 ## Scenario Usage ##
+... coming soon (will update by 24 August 2017) ...
 
 
 ## Updates ##
-2 August 2017 - Added CVE-2015-0936 modules
-5 August 2017 - Added heartbleed enumeration modules
+2 August 2017 - Added CVE-2015-0936 exploitation modules
+5 August 2017 - Added HeartBleed exploitation modules
 7 August 2017 - Added memory dump & key extraction modules, restructured main()
 
 
