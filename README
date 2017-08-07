@@ -104,7 +104,7 @@ root@kali:~/2fassassin#
 ... coming soon (will update by 24 August 2017) ...
 
 
-## Updates ##
+## Updated Features ##
 2 August 2017 - Added CVE-2015-0936 exploitation modules
 5 August 2017 - Added HeartBleed exploitation modules
 7 August 2017 - Added memory dump & key extraction modules, restructured main()
