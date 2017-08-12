@@ -108,6 +108,9 @@ root@kali:~/2fassassin#
 2 August 2017 - Added CVE-2015-0936 exploitation modules
 5 August 2017 - Added HeartBleed exploitation modules
 7 August 2017 - Added memory dump & key extraction modules, restructured main()
+8 August 2017 - Added functionalities: password parser to public key extractor, public key reader
+9 August 2017 - Added top level domain scanner
+10 August 2017 - Added passphrase remover
 
 
 
