@@ -111,6 +111,7 @@ root@kali:~/2fassassin#
 8 August 2017 - Added functionalities: password parser to public key extractor, public key reader, modulus comparer
 9 August 2017 - Added top level domain scanner
 10 August 2017 - Added passphrase remover
+11 August 2017 - Added site cloner
 
 
 
