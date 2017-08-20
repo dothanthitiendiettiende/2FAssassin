@@ -66,7 +66,10 @@ optional arguments:
 root@kali:~/2fassassin#
 
 
-## Example Usage ##
+
+## Simplified Architecture ##
+
+
 
                               Network Enumeration
                                       +
@@ -95,6 +98,8 @@ root@kali:~/2fassassin#
                         Key Based Authentication
 
 
+
+## Example Usage ##
 
 - Network enumeration:     
 ./assassin.py --scan <basic | advanced> --target <ip_address | range>
