@@ -100,13 +100,16 @@ root@kali:~/2fassassin#
 ./assassin.py --scan advanced --target 192.168.0.0/24
 ./assassin.py --scan basic --target 192.168.2.40
 
-- Check for common vulnerabilities which causing the private keys to leak out.
-./assassin.py --check all --mode quiet  
 
-- Attack SSH to get private keys (currently only support brute force)
+- Check for common vulnerabilities which causing the private keys to leak out.
+./assassin.py --check auto --mode attack  
+
+
+- SSH-based Attacks to get private keys 
 ./assassin.py --check ssh --mode attack      
 
-- Attack OpenSSL to get private keys:   
+
+- HeartBleed Attacks to get private keys:   
 ./assasin.py --check heartbleed --mode attack
 
 - View activity output:           
