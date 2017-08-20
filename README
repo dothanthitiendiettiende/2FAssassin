@@ -68,6 +68,33 @@ root@kali:~/2fassassin#
 
 ## Example Usage ##
 
+                              Network Enumeration
+                                      +
+                                      |
+                                      v
+
++----------------------------------------------------------------------------+
+|SSH-based Attacks                                                           |
+|ShellShock                                                                  |
+|HeartBleed                                                                  |
+|Ceragon FibeAir IP-10 SSH Private Key Exposure                              |
+|ExaGrid Known SSH Key and Default Password                                  |
+|F5 BIG-IP SSH Private Key Exposure                                          |
+|Loadbalancer.org Enterprise VA SSH Private Key                              |
+|Array Networks vAPV and vxAG Private Key Privilege Escalation Code Execution|
+|Quantum DXi V1000 SSH Pri^ate Key Exposure                                  |
++-------------------------------------+--------------------------------------+
+                                      |
+                                      |
+                                      v
+                            Keys Extraction
+                                      +
+                                      |
+                                      |
+                                      v
+                        Key Based Authentication
+
+
 - Network enumeration:     
 ./assassin.py --scan <basic | advanced> --target <ip_address | range>
 ./assassin.py --scan advanced --target 192.168.0.0/24
