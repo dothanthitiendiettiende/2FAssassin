@@ -140,9 +140,15 @@ root@kali:~/2fassassin#
 ./assassin.py --log loot
 
 
-## Scenario Usage ##
+## Scenario Usage (Examples) ##
+
+- Check if a remote host used Key-based Authentication
+./assassin.py --check key --mode detect
+
+
 - Find out which machine hosting the user account
 ./assassin.py --log whereis --user <username>
+
 
 - Find out What accounts can potentially be accessed by a specific user
 ./assassin.py --log  account --host <ip_address>
@@ -152,9 +158,6 @@ root@kali:~/2fassassin#
 ./assassin.py --tunnel ssh --chain 2 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> 
 ./assassin.py --tunnel ssh --chain 3 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> --user4 <username4> --host3 <server_ip3>
 
-
-## Scenario Usage ##
-... coming soon (will update by 24 August 2017) ...
 
 
 ## Updated Features ##
