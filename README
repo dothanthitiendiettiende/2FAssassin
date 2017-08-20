@@ -95,6 +95,7 @@ root@kali:~/2fassassin#
                         Key Based Authentication
 
 
+
 - Network enumeration:     
 ./assassin.py --scan <basic | advanced> --target <ip_address | range>
 ./assassin.py --scan advanced --target 192.168.0.0/24
@@ -171,6 +172,11 @@ root@kali:~/2fassassin#
 18 August 2017 - Added MiTM capability, DNS Spoofer
 19 August 2017 - Added more SSH-based modules, as well as CVE-2015-0936, CVE-2016-1560, CVE-2012-1493, ... (product specific)
 
+
+## FAQ ##
+
+- Error when launching network enumeration 
+Try loading the msgprc at msfconsole, and define the password (e.g., load msgrpc Pass=abc123)
 
 
 ## Limitations ##
