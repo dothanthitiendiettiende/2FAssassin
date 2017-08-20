@@ -101,23 +101,46 @@ root@kali:~/2fassassin#
 ./assassin.py --scan basic --target 192.168.2.40
 
 
-- Check for common vulnerabilities which causing the private keys to leak out.
+- AUTOMATIC MODE: 
+* Check everythings (common vulnerabilities) that cause the private keys to leak out.
 ./assassin.py --check auto --mode attack  
 
 
-- SSH-based Attacks to get private keys 
+- Manual MODE: 
+* SSH-based Attacks to get private keys 
 ./assassin.py --check ssh --mode attack      
 
-
-- HeartBleed Attacks to get private keys:   
+* HeartBleed Attacks to get private keys:   
 ./assasin.py --check heartbleed --mode attack
 
-- View activity output:           
+* Ceragon FibeAir IP-10 SSH Private Key Exposure: CVE-2015-0936
+./assassin.py --check ceragon --mode attack
+
+* ExaGrid Known SSH Key and Default Password : CVE-2016-1560
+./assassin.py --check exagrid --mode attack
+
+* F5 BIG-IP SSH Private Key Exposure: CVE-2012-1493
+./assassin.py --check f5 --mode attack
+
+* Loadbalancer.org Enterprise VA SSH Private Key
+./assassin.py --check loadbalancer --mode attack
+
+* Array Networks vAPV and vxAG Private Key Privilege Escalation Code Execution
+./assassin.py --check array --mode attack
+
+* Quantum DXi V1000 SSH Private Key Exposure
+./assassin.py --check quantum --mode attack
+
+
+- Administration:
+* View activity output:           
 ./assassin.py --log all
 
-- See what (e.g., credentials) you've got:          
+* See what (e.g., credentials) you've got:          
 ./assassin.py --log loot
 
+
+## Scenario Usage ##
 - Find out which machine hosting the user account
 ./assassin.py --log whereis --user <username>
 
