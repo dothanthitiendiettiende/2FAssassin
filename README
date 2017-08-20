@@ -70,7 +70,7 @@ root@kali:~/2fassassin#
 
                               Network Enumeration
                                       +
-                                      |
+                                      |      Building Target Database
                                       v
 
 +----------------------------------------------------------------------------+
@@ -85,11 +85,11 @@ root@kali:~/2fassassin#
 |Quantum DXi V1000 SSH Pri^ate Key Exposure                                  |
 +-------------------------------------+--------------------------------------+
                                       |
-                                      |
+                                      |      POST Modules
                                       v
                             Keys Extraction
                                       +
-                                      |
+                                      |      Looted Keys
                                       |
                                       v
                         Key Based Authentication
