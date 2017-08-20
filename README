@@ -69,13 +69,20 @@ root@kali:~/2fassassin#
 
 ## Simplified Architecture ##
 
+# Overall:
+to be updated soon
 
+
+
+
+
+# Key-based:
 
                               Network Enumeration
                                       +
                                       |      Building Target Database
+                                      |
                                       v
-
 +----------------------------------------------------------------------------+
 |SSH-based Attacks                                                           |
 |ShellShock                                                                  |
@@ -90,12 +97,12 @@ root@kali:~/2fassassin#
                                       |
                                       |      POST Modules
                                       v
-                            Keys Extraction
+                                Keys Extraction
                                       +
                                       |      Looted Keys
                                       |
                                       v
-                        Key Based Authentication
+                            Key-based Authentication
 
 
 
