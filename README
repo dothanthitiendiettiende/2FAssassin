@@ -67,7 +67,19 @@ root@kali:~/2fassassin#
 
 
 
-## Simplified Architecture ##
+## Example Usage ##
+
+- Network enumeration:     
+./assassin.py --scan <basic | advanced> --target <ip_address | range>
+./assassin.py --scan advanced --target 192.168.0.0/24
+./assassin.py --scan basic --target 192.168.2.40
+
+
+AUTOMATIC MODE
+--------------
+
+* Check everythings (common vulnerabilities) that cause the private keys to leak out.
+./assassin.py --check auto --mode attack  
 
 
                               Network Enumeration
@@ -95,23 +107,6 @@ root@kali:~/2fassassin#
                                       |
                                       v
                             Key-based Authentication
-
-
-
-## Example Usage ##
-
-- Network enumeration:     
-./assassin.py --scan <basic | advanced> --target <ip_address | range>
-./assassin.py --scan advanced --target 192.168.0.0/24
-./assassin.py --scan basic --target 192.168.2.40
-
-
-AUTOMATIC MODE
---------------
-
-* Check everythings (common vulnerabilities) that cause the private keys to leak out.
-./assassin.py --check auto --mode attack  
-
 
 
 Manual MODE
@@ -162,6 +157,9 @@ Certificate Handling
 
 {Pure Brute Force + Mutation}
 ./assassin.py --cert crack --mode bruteforce --filetype pfx
+
+* Dissect the certificate file + removing the passphrases + hunting for correct domain (target server)
+./assassin.py --cert dissect --filetype pfx
 
 
 Tunnelling
