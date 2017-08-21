@@ -157,6 +157,12 @@ to be updated soon
 * See what (e.g., credentials) you've got:          
 ./assassin.py --log loot
 
+* Find out the origin of the SSH user:
+./assassin.py --log whereis --user <username>
+
+* Find out what SSH accounts are remotely accessible:
+./assassin.py --log account --host <target_host>
+
 
 ## Scenario Usage (Examples) ##
 
