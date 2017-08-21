@@ -145,6 +145,11 @@ to be updated soon
 ./assassin.py --check quantum --mode attack
 
 
+- POST MODE:
+* Using looted private keys, authenticate to remote hosts
+./assassin.py --check ssh --mode auth
+
+
 - Administration:
 * View activity output:           
 ./assassin.py --log all
