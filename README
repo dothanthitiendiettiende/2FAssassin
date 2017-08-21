@@ -193,13 +193,13 @@ Administration
 Investigation
 --------------
 
-* Check if a remote host used Key-based Authentication
+* Check if a remote host using key-based authentication
 ./assassin.py --check key --mode detect
 
 * Find out which machine hosting the user account
 ./assassin.py --log whereis --user <username>
 
-* Find out What accounts can potentially be accessed by a specific user
+* Find out what accounts can potentially be accessed by a specific user
 ./assassin.py --log  account --host <ip_address>
 
 
