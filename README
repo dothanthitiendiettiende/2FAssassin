@@ -146,7 +146,7 @@ to be updated soon
 
 
 - POST MODE:
-* Using looted private keys, authenticate to remote hosts
+* Once you looted the private keys, perform key-based authentication to all targets in the database
 ./assassin.py --check ssh --mode auth
 
 
