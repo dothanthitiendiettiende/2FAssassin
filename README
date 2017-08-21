@@ -150,10 +150,10 @@ POST MODE
 ./assassin.py --check ssh --mode auth
 
 
-Certificate 
------------------------
+Certificate Handling
+---------------------
 
-* Look for potential certificate files
+* Look for potential certificate files (contains private keys inside!!!)
 ./assassin.py --cert analyze --filetype pfx
 
 * Cracking PKCS#12 Passphrases:
