@@ -148,6 +148,44 @@ POST MODE
 Certificate Handling
 ---------------------
 
+
+                                     #4
+                               Remove Passphrase <---------------------------+
+                                      +                                      |
+                                      |                                      |
+                                      |                                      |         #3
+                                      |                                      |  Parsing Cracked Passphase
+                                      |                                      |
+     Analyze Certificate              |                                      |
+               +                      v                                      |
+               |                                                             |
+               |            +---------------------------+                    |
+               |            |                           |                    +
+           #1  +----------> |   ^^^^^^^^^^^^^^^^^^^^^   | <---------+Cracking Passphrase
+                            |    PKCS#12 Certificate    |                    #2          
+                            |   ^^^^^^^^^^^^^^^^^^^^^   |
+                            |                           |
+                            +----------+-----+----------+                                        Keep this looted private key
+                                       |     |                                         +-------> for later usage
+                                       |     |                                         |         :)
+                                       |     |                                         |
+                                       |     |                                         |
+         #5                            |     |                               #6        |
+   Extract Public Key <----------------+     +--------------------> Extract Private Key+
+          +
+          |
+          v
+   Validate Domain  #7
+          +
+          |
+          v                                     #9                                                #10
+   Real Domain Hunting +----------------> Prepare Client Machine +--------------------->  Authenticate to SSL Server
+           #8                         +----------------------------+      SSL/HTTPS
+                                      | Loading Client|Certificate |        
+                                      +----------------------------+
+
+
+
 * Look for potential certificate files (contains private keys inside!!!)
 ./assassin.py --cert analyze --filetype pfx
 
