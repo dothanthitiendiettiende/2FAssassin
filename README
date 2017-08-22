@@ -151,40 +151,42 @@ Certificate Handling
 ---------------------
 
 
+
                                      #4
                                Remove Passphrase <---------------------------+
                                       +                                      |
                                       |                                      |
-                                      |                                      |         #3
-                                      |                                      |  Parsing Cracked Passphase
+                                      |                  #3                  |        
+                                      |         Parsing Cracked Passphase    |  
                                       |                                      |
      Analyze Certificate              |                                      |
                +                      v                                      |
                |                                                             |
                |            +---------------------------+                    |
                |            |                           |                    +
-           #1  +----------> |   ^^^^^^^^^^^^^^^^^^^^^   | <---------+ Getting Passphrase { Cracking | Stealing }
-                            |    PKCS#12 Certificate    |                    #2          
-                            |   ^^^^^^^^^^^^^^^^^^^^^   |
+           #1  +----------> |   ^^^^^^^^^^^^^^^^^^^^^   | <---------+ Getting Passphrase
+                            |    PKCS#12 Certificate    |           { Cracking | Stealing } 
+                            |   ^^^^^^^^^^^^^^^^^^^^^   |                     #2
                             |                           |
-                            +----------+-----+----------+                                        Keep this looted private key
-                                       |     |                                         +-------> for later usage
-                                       |     |                                         |         :)
+                            +----------+-----+----------+                                        
+                                       |     |             keep for later use <--------+
+                                       |     |                       :)                |        
                                        |     |                                         |
                                        |     |                                         |
          #5                            |     |                               #6        |
    Extract Public Key <----------------+     +--------------------> Extract Private Key+
           +
           |
-          v
-   Validate Domain  #7
-          +
-          |
-          v                                     #9                                                #10
-   Real Domain Hunting +----------------> Prepare Client Machine +--------------------->  Authenticate to SSL Server
+          v                                                    #10
+   Validate Domain  #7                            Authenticate to SSL Server  <-------+
+          +                                                                           |
+          |                                                                           |
+          v                                     #9                                    |        
+   Real Domain Hunting +----------------> Prepare Client Machine +--------------------+  
            #8                         +----------------------------+      SSL/HTTPS
-                                      | Loading Client|Certificate |        
+                                      | Loading Client|Certificate |
                                       +----------------------------+
+
 
 
 
