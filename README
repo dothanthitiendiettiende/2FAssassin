@@ -203,6 +203,17 @@ Certificate Handling
 ./assassin.py --cert windows --user <username> --secret <password> --host <client_machine_ip>
 
 
+                                                          #2 Loads client-certificate
+           +-----------------+           +----------------+                   +------------------+
+           | Attacker Machine|           | Windows Client |                   |   SSL Website    |
+           |  (2FAssassin)   +---------> |(172.16.173.180)+-----------------> | (172.16.173.182) |
+           +-----------------+           +----------------+                   +------------------+
+ Sends client-certificate, instruction script               Authenticates to remote SSL website
+                 #1                                                         #3
+
+
+
+
 Tunnelling
 -----------
 
