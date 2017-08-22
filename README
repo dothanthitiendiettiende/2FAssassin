@@ -199,6 +199,9 @@ Certificate Handling
 * Dissect the certificate file + removing the passphrases + hunting for correct domain (target server)
 ./assassin.py --cert dissect --filetype pfx
 
+* Preparing client machine + install cracked certificate + authenticate to SSL server
+./assassin.py --cert windows --user <username> --secret <password> --host <client_machine_ip>
+
 
 Tunnelling
 -----------
