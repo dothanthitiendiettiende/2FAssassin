@@ -115,9 +115,6 @@ Manual MODE
 * SSH-based Attacks to get private keys 
 ./assassin.py --check ssh --mode attack
 
-* Check & disable Two-Factor Authentication
-./assassin.py --check config --mode attack
-
 * HeartBleed Attacks to get private keys:   
 ./assasin.py --check heartbleed --mode attack
 
@@ -139,6 +136,8 @@ Manual MODE
 * Quantum DXi V1000 SSH Private Key Exposure
 ./assassin.py --check quantum --mode attack
 
+* Check & disable Two-Factor Authentication
+./assassin.py --check config --mode attack
 
 
 POST MODE
