@@ -161,7 +161,7 @@ Certificate Handling
                |                                                             |
                |            +---------------------------+                    |
                |            |                           |                    +
-           #1  +----------> |   ^^^^^^^^^^^^^^^^^^^^^   | <---------+Cracking Passphrase
+           #1  +----------> |   ^^^^^^^^^^^^^^^^^^^^^   | <---------+ Getting Passphrase { Cracking | Stealing }
                             |    PKCS#12 Certificate    |                    #2          
                             |   ^^^^^^^^^^^^^^^^^^^^^   |
                             |                           |
