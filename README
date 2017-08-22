@@ -113,7 +113,10 @@ Manual MODE
 -----------
 
 * SSH-based Attacks to get private keys 
-./assassin.py --check ssh --mode attack      
+./assassin.py --check ssh --mode attack
+
+* Check & disable Two-Factor Authentication
+./assassin.py --check config --mode attack
 
 * HeartBleed Attacks to get private keys:   
 ./assasin.py --check heartbleed --mode attack
