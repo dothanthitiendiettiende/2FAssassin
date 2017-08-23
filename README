@@ -248,7 +248,7 @@ Investigation
 --------------
 
 * Check if a remote host using key-based authentication
-./assassin.py --check key --mode detect
+./assassin.py --check pka --mode detect
 
 * Find out which machine hosting the user account
 ./assassin.py --log whereis --user <username>
