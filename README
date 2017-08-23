@@ -1,8 +1,4 @@
 
-## notes ##
-- Please standby, a major update to the master branch will be performed on 24 August 2017. 
-
-
 ## Preamble ##
 
 - Code changes from time to time, please do a 'git pull' before running the tool.
@@ -256,19 +252,6 @@ Investigation
 * Find out what accounts can potentially be accessed by a specific user
 ./assassin.py --log  account --host <ip_address>
 
-
-
-
-## Updated Features ##
-2 August 2017 - Added CVE-2015-0936 exploitation modules
-5 August 2017 - Added HeartBleed exploitation modules
-7 August 2017 - Added memory dump & key extraction modules, restructured main()
-8 August 2017 - Added functionalities: password parser to public key extractor, public key reader, modulus comparer
-9 August 2017 - Added top level domain scanner
-10 August 2017 - Added passphrase remover
-11 August 2017 - Added site cloner
-18 August 2017 - Added MiTM capability, DNS Spoofer
-19 August 2017 - Added more SSH-based modules, as well as CVE-2015-0936, CVE-2016-1560, CVE-2012-1493, ... (product specific)
 
 
 ## FAQ ##
