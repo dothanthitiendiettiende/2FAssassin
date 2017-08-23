@@ -220,18 +220,18 @@ Certificate Handling
 Backdoor
 --------
 
-                                                       {add keys}
-                           '2fassassin'                +---------> account_1
-                #1        +-----------+                |
-          +-------------> |create user|                +---------> account_2
-          |     #2        +--------------------+       |
-sshkey    +-------------> |generate RSA keypair|       +---------> account_3
-          |     #3        +------------------------+   | 
-          +-------------> |access to remote server|----+---------> account_4
-                          +------------------------+   |
-                                                       +---------> account_5
-                                                       |
-                                                       +---------> .........
+                                                          #4 {add keys}
+                           '2fassassin'                    +---------> account_1
+                #1        +-----------+                    |
+          +-------------> |create user|                    +---------> account_2
+          |     #2        +--------------------+           |
+sshkey    +-------------> |generate RSA keypair|           +---------> account_3
+          |     #3        +------------------------+       | 
+          +-------------> |access to remote server| -------+---------> account_4
+                          +------------------------+       |
+                                                           +---------> account_5
+                                                           |
+                                                           +---------> .........
 
 
 
