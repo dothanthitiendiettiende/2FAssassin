@@ -143,6 +143,9 @@ POST MODE
 ./assassin.py --check ssh --mode auth
 
 
+
+
+
 Certificate Handling
 ---------------------
 
@@ -211,6 +214,17 @@ Certificate Handling
  Sends client-certificate, instruction script               Authenticates to remote SSL website
                  #1                                                         #3
 
+
+
+
+Backdoor
+--------
+
+* Add arbitrary SSH keys to all the accessible accounts
+./assassin.py --check sshkey --mode attack
+
+* Drop persistent backdoor (reverse shell) to all the accessible accounts
+./assassin.py --check reverse --mode attack
 
 
 
