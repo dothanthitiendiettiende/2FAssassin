@@ -290,7 +290,7 @@ Try loading the msgprc at msfconsole, and define the password (e.g., load msgrpc
 
 - The user "2fassassin" not found during "./assassin.py --check sshkey --mode attack"
 Try create the user manually:
-useradd 2fassassin
+useradd --force-badname 2fassassin
 su 2fassasin
 cd $home
 ssh-keygen -t rsa
