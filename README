@@ -242,6 +242,49 @@ sshkey    +-------------> |generate RSA keypair|           +---------> account_3
 ./assassin.py --check reverse --mode attack
 
 
+Impersonation / Client Side Attacks
+-----------------------------------
+
+
+                                            #1
+                           Server certificate was stolen by attacker
++------------+
+|  Attacker  | <-----------------------------------------------------------+
+|(2FAssassin)|                                                             |
++----+--+----+                                                             |
+     |  ^                                                                  |
+     |  |     #7                                                           |
+     |  | reverse shell                                                    |
+     |  | connects back                                                    |
+     |  | to attacker                                                      |
+     |  |                                                                  |
+     |  |                   +----------------+     (normal)      +---------+--------+
+     |  |                   | Windows Client |   client auth     |   SSL Website    |
+     |  +-------------------+(172.16.173.180)+-----------------> | (172.16.173.182) |
+     |                      +----------+-+---+                   +------------------+
+     |                                 ^ |
+     |                     #4          | |
+     |              SSL webiste is now | |
+     |               at 172.16.173.194 | +-------------------------------+      #6
+     |                                 |                                 | client download
+     |                                 |                         #5      | malware from the
+     |       #3                  +-----+-----------+         (abnormal)  | phishing website
+     |    DNS Spoofing           |                 |         client auth |
+     +-------------------------> |   DNS Server    |                     |
+     |                           |(172.16.173.191) |                     |
+     |                           |                 |                     |
+     |                           +-----------------+                     |
+     |                                                                   |
+     |                                                            +------------------+
+     +----------------------------------------------------------> | Phishing Website |
+     #2  Attacker cracked the server certificate, then use it     | (172.16.173.194) |
+         to set up phishing website                               +------------------+
+
+ 
+ 
+* Setup phishing website + DNS Spoofing Attacks 
+./assassin.py --filetype pfx --spoof <phishing_server_ip> --user <username> --secret <password> --target <victim_ip> --gateway <dns_ip> --mitm <on|off>
+
 
 Tunnelling
 -----------
