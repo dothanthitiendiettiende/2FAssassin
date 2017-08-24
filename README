@@ -242,6 +242,9 @@ sshkey    +-------------> |generate RSA keypair|           +---------> account_3
 ./assassin.py --check reverse --mode attack
 
 
+
+
+
 Impersonation / Client Side Attacks
 -----------------------------------
 
@@ -284,6 +287,8 @@ Impersonation / Client Side Attacks
  
 * Setup phishing website + DNS Spoofing Attacks 
 ./assassin.py --filetype pfx --spoof <phishing_server_ip> --user <username> --secret <password> --target <victim_ip> --gateway <dns_ip> --mitm <on|off>
+
+
 
 
 Tunnelling
